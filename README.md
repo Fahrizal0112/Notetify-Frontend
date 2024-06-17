@@ -9,8 +9,12 @@ Notetify is a versatile note-taking application that helps you create and manage
 
 ## Screenshots
 
-![Screenshot1](path_to_screenshot1)
-![Screenshot2](path_to_screenshot2)
+![Android Large - 2](https://github.com/Fahrizal0112/Notetify-Frontend/assets/106448193/eb6ab575-81a2-4e2f-9af6-2df4a1e5de41)
+![Android Large - 3](https://github.com/Fahrizal0112/Notetify-Frontend/assets/106448193/368d7073-b7d7-4521-824c-b3b1329ed3c5)
+![Android Large - 4](https://github.com/Fahrizal0112/Notetify-Frontend/assets/106448193/d9917511-bcfa-4011-8a79-97bb61559298)
+![Android Large - 6](https://github.com/Fahrizal0112/Notetify-Frontend/assets/106448193/8a3beb7c-f752-46fc-aa7f-37a4ed1b4a7a)
+![Android Large - 7](https://github.com/Fahrizal0112/Notetify-Frontend/assets/106448193/ed68eebf-2445-4951-b03a-8c3fa38acd65)
+
 
 ## Installation
 
