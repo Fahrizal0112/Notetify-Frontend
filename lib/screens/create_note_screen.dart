@@ -12,52 +12,56 @@ class CreateNoteScreen extends StatefulWidget {
 }
 
 class _CreateNoteScreenState extends State<CreateNoteScreen> {
-  late Future<List<Note>> _notes;
+  final _titleController = TextEditingController();
+  final _contentController = TextEditingController();
+
+  Future<void> _saveNote() async {
+    final newNote = Note(
+      id: 0, // ID will be set by the backend
+      userId: 0, // Update with actual userId if neede
+      title: _titleController.text,
+      content: _contentController.text,
+      createdAt: DateTime.now(),
+    );
+    await ApiService.createNote(widget.token, newNote);
+    Navigator.of(context).pop(); // Go back to the previous screen
+  }
 
   @override
-  void initState() {
-    super.initState();
-    _notes = ApiService.getNotes(widget.token);
+  void dispose() {
+    _titleController.dispose();
+    _contentController.dispose();
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Notes')),
-      body: FutureBuilder<List<Note>>(
-        future: _notes,
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(child: CircularProgressIndicator());
-          } else if (snapshot.hasError) {
-            return Center(child: Text('Error: ${snapshot.error}'));
-          } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-            return Center(child: Text('No notes found'));
-          } else {
-            final notes = snapshot.data!;
-            return ListView.builder(
-              itemCount: notes.length,
-              itemBuilder: (context, index) {
-                final note = notes[index];
-                return ListTile(
-                  title: Text(note.title),
-                  subtitle: Text(note.content),
-                  onTap: () {
-                  },
-                );
-              },
-            );
-          }
-        },
+      appBar: AppBar(
+        title: Text('Create Note'),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.save),
+            onPressed: _saveNote,
+          ),
+        ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => CreateNoteScreen(token: widget.token)),
-          );
-        },
-        child: Icon(Icons.add),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            TextFormField(
+              controller: _titleController,
+              decoration: InputDecoration(labelText: 'Title'),
+            ),
+            SizedBox(height: 16),
+            TextFormField(
+              controller: _contentController,
+              decoration: InputDecoration(labelText: 'Content'),
+              maxLines: null,
+            ),
+          ],
+        ),
       ),
     );
   }
