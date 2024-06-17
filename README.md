@@ -8,12 +8,11 @@ Notetify is a versatile note-taking application that helps you create and manage
 - **Set Reminders**: Schedule reminders for your tasks and events. Notetify will alert you at the specified time, ensuring you never forget important activities.
 
 ## Screenshots
-
-![Android Large - 2](https://github.com/Fahrizal0112/Notetify-Frontend/assets/106448193/eb6ab575-81a2-4e2f-9af6-2df4a1e5de41)
-![Android Large - 3](https://github.com/Fahrizal0112/Notetify-Frontend/assets/106448193/368d7073-b7d7-4521-824c-b3b1329ed3c5)
-![Android Large - 4](https://github.com/Fahrizal0112/Notetify-Frontend/assets/106448193/d9917511-bcfa-4011-8a79-97bb61559298)
-![Android Large - 6](https://github.com/Fahrizal0112/Notetify-Frontend/assets/106448193/8a3beb7c-f752-46fc-aa7f-37a4ed1b4a7a)
-![Android Large - 7](https://github.com/Fahrizal0112/Notetify-Frontend/assets/106448193/ed68eebf-2445-4951-b03a-8c3fa38acd65)
+<img src="https://github.com/Fahrizal0112/Notetify-Frontend/assets/106448193/eb6ab575-81a2-4e2f-9af6-2df4a1e5de41" alt="Screenshot 1" width="300"/>
+<img src="https://github.com/Fahrizal0112/Notetify-Frontend/assets/106448193/368d7073-b7d7-4521-824c-b3b1329ed3c5" alt="Screenshot 2" width="300"/>
+<img src="https://github.com/Fahrizal0112/Notetify-Frontend/assets/106448193/d9917511-bcfa-4011-8a79-97bb61559298" alt="Screenshot 3" width="300"/>
+<img src="https://github.com/Fahrizal0112/Notetify-Frontend/assets/106448193/8a3beb7c-f752-46fc-aa7f-37a4ed1b4a7a" alt="Screenshot 4" width="300"/>
+<img src="https://github.com/Fahrizal0112/Notetify-Frontend/assets/106448193/ed68eebf-2445-4951-b03a-8c3fa38acd65" alt="Screenshot 5" width="300"/>
 
 
 ## Installation
